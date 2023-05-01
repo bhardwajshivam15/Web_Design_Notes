@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>button and links</title>
+  <style>
+    .but{
+      background-color: rgb(74, 145, 106);
+      border: 8px solid rgb(64, 0, 128);
+      padding: 12px;
+      margin: 34px auto;
+width: 666px;
+    }
+    a{
+      text-decoration: none;   /*to remove underline of link */
+       /* color: red; */
+    }
+    /* psuedo selector */
+       a:hover{
+         color: rgb(10, 114, 45);       /*to change the color of link when it is touched by curser*/
+         background-color: black;   /*background colour also changed on touching*/
+               }
+               a:visited{
+                 color: blueviolet;     /*whenever a sight visited , this color shows*/
+               }
+               a:active{
+                 background-color: brown;
+                 color: rgb(179, 179, 82);
+               }
+    .btn{
+      font-weight: bold;
+      background-color: aqua;
+      padding: 6px;
+      border: none;         /* to remove unwanted outline*/
+      cursor: pointer;        /*to get thumb curser on buttons and link*/
+      font-size: 15px;
+      border-radius: 6px;
+    }
+    button:hover{
+          background-color: rgb(61, 36, 44);
+          border: 4px solid green;     /*whenever u wanna show border on touching*/
+    }
+    .navbar{
+      background-color: rgb(168, 154, 26);
+    }
+    .navbar ul{
+      overflow: auto;      /* its written bcz of background-color color disappears */
+    }
+    .navbar li{
+      float: left;
+      list-style: none;      /*to remove point*/
+      margin: 13px 23px;
+    }
+    .navbar li a{
+      padding: 3px 3px;
+      /* text-decoration: none; */
+      color: blanchedalmond;
+    }
+    .navbar li a:hover{
+      color: brown;}
+    .search{
+      float: right;
+      padding: 12px 75px;
+    }
+    /* .search:hover{
+      /* cursor: pointer; */
+ 
+    .navbar input{
+      border: 2px solid rgb(104, 52, 52);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-weight: bold;
+      
+      /* margin: auto; */
+    }
+  img{
+      width: 134px;
+      display: block;      /*this is written to make a inline element in auto position changing it into block element*/
+      margin: auto;
+    }
+    h3{
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0px;
+      text-align: center;    /* to center the text*/
+    }
+    header.top{
+      margin: 23px auto;
+      border: 22px solid red;
+      width: 220px;
+    }
+    .box{
+      border: 4px solid black;
+background-color: gray;
+padding: 23px;
+margin: 4px;
+display: inline-block;     /*this is used so that an inline element can alter its width like block element*/
+width: 32%;
+box-sizing: border-box;    /* this is used so that width should not change*/
+    }
+    .container{
+      margin: auto;
+      width: 1200px;
+    }
+    .set{
+      display: inline-block;
+      border: 2px solid yellow;
+      width: 150px;
+      height: 150px;
+      margin: 2px;
+    }
+    .lbw{
+      border: 3px solid lightgreen;
+      background-color:  rgb(149, 141, 156);
+      height: 545px;
+    }
+     #set3{
+      position: sticky;     /*it means it will move relative to its old position and it will leave gap 
+      but in absolute position a box will move relative to its parent box*/
+      /* top: 34px; */
+      /* left: 34px; */
+      /* right: 3px; */
+      /* bottom: 3px; */
+      top: 10px;
+      left: 34px;
+    }
+    .bg{
+      /* display: inline-block; */
+      width: 170px;
+      height: 170px;
+      border: 2px solid black;
+    }
+    #bg1{
+      /* z-index only works in absolute,relative,sticky,fixed */
+      z-index: 12;
+      /* visibility: hidden; */
+      /* display: none; */
+      position: relative;
+      top: 100px;
+      background-color: red;}
+    #bg2{
+      /*to hide that element*/
+      /* visibility: hidden;       */
+      position: relative;
+      top: 13px;
+      z-index: 13;
+      background-color: yellow;}
+    #bg3{
+       /* it also hide element and its space also*/
+   /* display: none; */
+      background-color: green;}
+    #bg4{background-color: blue;}
+    .bro{
+      margin-top: 9px;
+      height: 544px;
+      width: 100%;
+      border: 2px solid green;
+      display: flex;
+      background-color: rgb(75, 132, 182);
+      /* flex property of bro container  */
+       /* flex-direction: row;   row is default value */
+      /* flex-direction: column-reverse; */
+      /* flex-direction: row-reverse; */
+      /* flex-direction: column; */
+      flex-wrap: wrap;
+      /* flex-wrap: wrap-reverse; */
+      /* flex-flow: row-reverse-wrap;   we can fix wrap and flex direction together also */
+      /* justify-content: center; */
+      /* justify-content: space-between; */
+      /* justify-content: space-around; */
+      /* justify-content: space-evenly; */
+      /* align-items: center;     to set vertically centre */
+      /* align-items: flex-end;    take it to bottom */
+      /* align-items: centre; */
+    }
+    .jk{
+      width: 200px;
+      height: 200px;
+      background-color: rgb(94, 8, 82);
+      border: 2px solid red;
+      margin: 2px;
+      padding: 2px;
+    }
+    #jk1{
+      /* flex properties of item  */
+      /* order: 1; */
+      /* when flex direction is set to be row flex basis controls
+       width and if its set to coloumn then it will control height */
+      flex-basis: 330px;
+      /* align-items: center; */
+    }
+    #jk2{
+      /* which order is more will go in last  */
+      order: 2;
+      flex-grow: 2;  /* it grow the size x times*/
+      flex-shrink: 2;   /* it will shrink x times*/
+    }
+    #jk3{
+      /* we can also write 3 property tohether */
+      /* flex: 3 3 30px;     grow shrink basis */
+      /* align-self:flex-end; */
+      margin: 10px;
+      /* align-self: center; */
+    }
+    /* reponsive design  */
+    .noc{
+      /* height is set by vh and width by vw  */
+      width: 100vw;
+      height: 120vh;
+      font-size: 50px;
+      text-align: center;
+      border: 3px solid rgb(131, 148, 228);
+      border-radius: 100px;
+      margin: 20px;
+      /* padding: 40px; */
+    }
+   #con1{
+     /* em is a way of setting properties as per its parent */
+     /* rem is used to change property as per default html size  */
+     font-size: 4em;     
+     padding: 1em;
+
+   }
+  </style>
+</head>
+<body>
+   <div class="but">
+  <h2>how to construct a button</h2>
+  <p>Lque tempore maxime quisquam at ad t vel aut.</p>
+ <a href="https://google.com" class="btn">read more</a>
+ <button class="btn">Contact us</button>
+  </div>
+  <!-- creating a navigation menu  -->
+  <header >
+    <nav class="navbar">
+      <ul class="bts">
+        <li><a href="">Home</a></li>
+        <!-- <li><a href="">|</a></li> -->
+        <li><a href="">About</a></li>
+        <!-- <li><a href="">|</a></li> -->
+        <li><a href="">Services</a></li>
+        <!-- <li><a href="">|</a></li> -->
+        <li><a href="">Contact us</a></li>
+        <div class="search">
+        <input type="text " name="search" placeholder="Search this website">
+        </div>
+      </ul>
+      </nav>
+  </header>
+  <header class="top">
+    <img src="https://www.provenceweb.fr/grafiq/villes83/revest/rue3.jpg" alt="">
+    <h3>Welcome to my blog</h3>
+  </header>
+  <div class="container">
+    <div class="box">
+     <h4 class="heading">Heading</h4>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores o</p>
+    </div>
+    <div class="box">
+      <h4 class="heading">Heading</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores o</p>
+     </div>
+     <div class="box">
+      <h4 class="heading">Heading</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores o</p>
+     </div>
+<header>
+</div>
+<div class="lbw">
+<div class="set" id="set1">1</div>
+<div class="set" id="set2">2</div>
+<div class="set" id="set3">3</div>
+<div class="set" id="set4">4</div>
+</div>
+</header>
+  <div class="bg" id="bg1"></div>
+  <div class="bg" id="bg2"></div>
+  <div class="bg" id="bg3"></div>
+  <div class="bg" id="bg4"></div>
+<div class="bro">
+  <div class="jk" id="jk1">First</div>
+  <div class="jk" id="jk2">Second</div>
+  <div class="jk" id="jk3">Third</div>
+  <!-- <div class="jk" id="jk4">Fourth</div>
+  <div class="jk" id="jk5">Fifth</div>
+  <div class="jk" id="jk6">sixth</div> -->
+</div>
+<div class="noc">
+  <div class="con" id="con1">hey</div>
+  <div class="con" id="con2">hii</div>
+  <div class="con" id="con3">hlo</div>
+</div>
+</body>
+</html>

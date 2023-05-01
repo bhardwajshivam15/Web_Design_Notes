@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="color.css">
+  <style>
+    /* this is called element selector */
+    p#p{
+      color: blue;
+      background-color: yellow;
+      text-align: center;
+    }
+    h1{
+      color: palevioletred;
+    }
+    div#me{
+      color: red !important;
+      background-color: brown;
+    }
+    #redel{
+      color: blueviolet;
+      background-color: white;
+      border: 5px solid black;
+    }
+    .blue{
+      color: red;
+      background-color: skyblue;
+    }
+    footer,b#b{
+      background-color: yellow;
+      border: 2px solid red;
+      border-width: 9px;
+      border-radius: 51px;        /* we can also write border width color and style in same line as 9px solid yellow */
+      border-style: solid;
+      width: 533px;
+      height: 23px;
+    }
+    #font{
+      font-family: initial;
+      font-size: 45px;
+      line-height: 2.0em;
+      color: rgb(114, 876, 114);              /* color by rgb value*/
+      background-color: #60dc;
+    }
+    b.b{
+        font-weight: bolder;
+        font-style: italic;
+    }
+    em{
+      border-top:  6px solid red;
+      border-left: 6px solid blue;
+      border-top-left-radius: 25px;
+    }
+    h4{
+      height: 70px;
+      width: 455px;
+      background-image: url('https://www.w3schools.com/favicon.ico');
+      border: 3px solid pink;
+      /* u can repeat image in x and y direction individually by writing repeat x or repeat y */
+      background-repeat: no-repeat;
+background-position: center center;       /* u can give it by pixle size also* or giving top bottom left right also*/
+    }
+    h3#bt1{
+      background-color: rgb(231, 230,241);
+      border: 3px solid #400677;
+      /* padding is used to creat space btw border and written content  */
+      padding: 39px;
+      /* margin is used to create space all around of a text content outside border  */
+      margin: 34px;
+    }
+    h3#bt2{
+      background-color: rgb(231, 230,241);
+      border: 3px solid #400677;
+      padding-top: 39px;
+      padding-left: 12px;
+      /* padding top right bottom left  */
+    }
+    h3#bt3{
+      background-color: rgb(231, 230,241);
+      border: 3px solid #400677;
+      /* padding/margin like this also top right bottom left  */
+      padding: 23px 41px 52px 45px;
+      /* we can give margin also like this  */
+      margin: 15px 34px;
+      width: 211px;
+      border-radius: 24px;
+      /* box sizing is used to keep width constant on variable padding  */
+      box-sizing: border-box;
+    }
+    *{
+      background-color: #ffffff;
+      /* background-image: url('https://www.provenceweb.fr/grafiq/villes83/revest/rue3.jpg'); */
+      /* background-repeat: no-repeat; */
+    }
+    .container{
+width: 900px;
+border: 3px solid purple;
+ margin: auto;    /* to set the box in centre*/
+font-family: cursive;
+background-color: rgb(137, 199, 61);
+    }
+    .person{
+        border: 3px solid gray;
+        margin: 12px 3px;
+        padding: 12px 3px;
+        background: rgb(248, 238, 238);
+    }
+    #shivam{
+      float: left;
+      width: 50%;
+      text-align: right;     /*to align text*/
+    }
+    #vinay{
+      float: right;
+      width: 50%;
+      text-align: left;
+    }
+    #vineet{
+      clear: left;       /*elements which are floated left dont contrast now with vinnet wala box*/
+      clear: right;      /* we can use clear both also*/
+      text-align: center;
+    }
+</style>
+</head>
+<body>
+<h1 id="bts" class="tbs">this is mainbox</h1>
+ <!-- . for class and # for id (this is called emmet and it is useful for shortcut)-->
+<h class="bts"></h>
+<h2 id="bts"></h2>
+<!-- if we use ony .class or #id then div is atomattically called -->
+<div class="op"></div>
+<!-- we can create multiple elements also. -->
+<!-- span.c1.c2.c3 -->
+<span class="c1 c2 c3">me</span>
+<!-- HTML ENTITIES -->
+<!-- &nbsp; is for creating a space -->
+<h1>hii &nbsp; there</h1>
+i am here with &lt;p&gt;
+<!-- pound symbol -->
+<div id="me" style="color: aqua; background-color: orange;">this is pound &pound;</div>
+<div>this is copyright &copy;</div>
+<div>this is arrow &rAarr;</div>
+<div>This is fraction &frac45;</div>
+<div>This is blank char &#8203</div>
+<!-- semantic elements -->
+<details>
+  <summary>this data is shown by shown atomattically.</summary>
+  this data is shown on clicking on triangle point.
+</details>
+<!-- Now lets talk about inline css  -->
+<strong style="color: brown; background-color: aquamarine;">Color change in line</strong>
+<p id="p">My name is shivam</p>
+<!-- which css is lower to the order takes higher precedense -->
+<!-- but if u wanna give precedense to upper css u can add !important tag to it  -->
+<!-- CSS selectors -->
+<!-- id selector  -->
+<p id="redel">id selector</p>
+<!-- class selector  -->
+<p class="blue">class selector</p>
+<!-- grouping selector -->
+<footer>grouping footer with other tag</footer>
+<b id="b">italian</b><br>
+<strong id="font">Lets <b class="b">play</b> with fonts</strong><br>
+<!-- ways to get colored first is direct by color name,2nd by rgb value,3rd by hex value-->
+<em>this is border styling</em><br><br>
+<!-- adding image in background  -->
+<h4>This is background image setting</h4>
+<h3 class="padd" id="bt1">Margin border padding</h3>
+<h3 class="padd" id="bt2">Margin border padding</h3>
+<h3 class="padd" id="bt3">Margin border padding</h3>
+<div class="container">
+  <div id="shivam" class="person">
+    <h3>Shivam</h3>
+    <p id="1para" class="para">Lorem, ipsum dolor sit amet consectetur
+       adipisicing elit. Aspernatur alias distinctio, deleniti quos Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempora illum cum odio pariatur obcaecati sapiente, ea, tenetur eveniet itaque recusandae! Dignissimos iure dolores saepe, optio labore similique ea fuga odit ab possimus molestias debitis quae laboriosam dicta et, ducimus
+        id tempore, quidem alias porro. Voluptatem aliquam soluta mollitia ratione eos quam cupiditate est? Labore, vel. quisquam perspiciatis.</p>
+  </div>
+  <div id="vinay" class="person">
+    <h3>Vinay</h3>
+    <p id="2para" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Eveniet quasi consectetur dignissimos aperiam, maxime quaerat.</p>
+  </div>
+  <div id="vineet" class="person">
+    <h3>Vineet</h3>
+    <p id="3para" class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+       A, sint voluptatibus. Doloribus quibusdam pariatur Lorem ipsum </p>
+  </div>
+</div>
+</body>
+</html>

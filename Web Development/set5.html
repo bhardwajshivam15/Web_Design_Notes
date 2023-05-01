@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .set{
+      /* border: 4px solid palevioletred; */
+      color: white;
+      background-color: red;
+      text-align: center;
+      font-size: 72px;
+      display: none;
+    }
+    @media only screen and(max-width:300px) and (min-width:100px) {
+      #set1{
+        display: block;
+        background-color: rgb(14, 238, 238);
+      }
+    }
+    @media only screen and (max-width:500px) and (min-width:300px) {
+      #set2{
+        display: block;
+        background-color: rgb(8, 83, 83);
+      }
+    }
+    @media only screen and (max-width:800px) and (min-width:500px) {
+      #set3{
+        display: block;
+        background-color: rgb(255, 145, 0);
+        height: 300px;
+      }
+    }
+    @media only screen and (min-width:800px) {
+      #set4{
+        display: block;
+         background-color: rgb(255, 0, 212);
+        border: 6px solid goldenrod;
+      }
+    } 
+    h1{
+      background-color: pink;
+      color: black;
+      font-weight: bold;
+      /* margin: 400px; */
+      text-align: center;
+    }
+     div.container > p{    /*  > is used to execute property only on direct children */
+      background-color: rgb(245, 245, 17);
+      color: green;
+      font-weight: bold;
+      text-align: center;
+    }
+     /* div + p{
+       color: rgb(146, 17, 66);
+       background-color: aqua;
+     }this is used to execute property on which last 
+     child is div or any tag which w add to it (if is right after div)*/
+     input{
+       display: block;
+     }
+     .boxer{
+       display:block;
+       width: 233px;
+       /* border: 6px solid blueviolet; */
+       margin: auto;
+     }
+     input[type="text"]{
+       padding: 23px;
+       border: 2px solid red;
+      }
+      a[target]{
+        font-size: 44px;
+        color: violet;
+      }
+      a[target="_self"]{
+        color: #4c96db;
+      }
+     /* li nth child psuedo selector */
+     li.box:nth-child(4){
+       background-color: #ff45ff;
+     }
+     li.box:nth-child(2n+1){
+       background-color: #1747af;
+       /* li:nth-child(odd) */
+     }
+/* before and after selector */
+body{
+  margin: 0px;
+  padding: 0px;
+  /* background-color: black; */
+  color: rgb(219, 5, 5);
+  background-image: url('lr.jpg');
+  background-repeat: no-repeat;
+  /* position: absolute;
+  top: 300px; */
+}
+section{
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-top: 40px;
+}
+section::before{
+  /* background: url('lr.jpg') */
+  opacity: 0.1;
+}
+h3{
+  font-size: 4em;
+  font-family: "PT Sans Narrow script=latin rev=2";
+}
+.navigation{
+  margin: 3px 23px;
+  font-size: 20px;
+  display: flex;
+}
+.navigation li{
+  list-style: none;
+  padding: 10px;
+}
+.cord{
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+}
+.card{
+  color: black;
+  /* display: inline-block; */
+  /* border: 2px solid red; */
+  background-color: burlywood;
+  padding: 23px 12px;
+  margin: 30px 20px ;
+  /* box shadow offsetx offset y blur radius spread radius  */
+  box-shadow: 5px 5px 8px 14px rgba(56, 34, 22, 12);    /* this shows shadow */
+  /* box inset shows shadow inside box  */
+  /* box-shadow: inset 12px 11px rgb(202, 79, 100); */
+}
+section h3{
+  /* text-shadow: 5px 5px 8px purple; */
+  text-shadow: -5px -5px 8px rgb(179, 76, 179);
+}
+.rom{
+  --ram-color: #db31db;
+  /* background-color: #311131; */
+  display: flex;
+}
+.ram{
+  /* variable can be executed anywhwere in this scope only  */
+  --ram-color: #eb2beb;
+  background-color: var(--ram-color);
+  width: var(--maxw);
+  height: 200px;
+  margin: 12px 9px;
+  box-shadow: 2px 2px var(--danger-color);
+}
+:root{
+  /* root variable can be used anywhere */
+  --ram-color:#311131;
+  --danger-color:red;
+  --maxw:188px;
+}
+.qw{
+  background-color: rgb(158, 128, 30);
+}
+.bx{
+  color: white;
+  background-color: rgb(138, 206, 138);
+  width: 250px;
+  height: 250px;
+  position: relative;
+  /* animation-name: shivam; */
+  animation-name: shivam2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  /* animation-fill-mode: forwards;     this stops animation on 'to' condition */
+  /* animation-fill-mode: alternate; */
+  /* animation-timing-function: ease-in;     slow in starting and fast in end  */
+  /* animation-delay: 5s;  animation performs after 5s */
+  /* animation-direction: reverse;    animation is reversed */
+  /* animation: animation name duration timingfunction delay count fill mode */
+}
+@keyframes shivam{
+  from{
+    width: 200px;
+  }
+  to{
+    width: 400px;
+  }
+}
+@keyframes shivam2{
+  0%{
+     top: 0px;
+     left: 0px;
+  }
+  25%{
+    top: 25px;
+    left: 0px;
+  }
+  50%{
+     top: 250px;
+     left: 250px;
+  }
+  75%{
+top: 20px;
+left: 250px;
+  }
+}
+.st{
+  background-color: black;
+}
+#st{
+  margin-top: 300px;
+  display: flex;
+  height: 200px;
+  width: 200px;
+  background-color: aqua;
+  justify-content: center;
+  align-items: center;
+  transition-property: background-color;
+  transition-duration: 2s;
+  /* transition-timing-function: ease-in; */
+  transition-delay: 3s;
+  transition: all 1s ease-in 3s;  /* we can do it in one line also*/
+}
+#st:hover{
+  background-color: #311131;
+  height: 300px;
+  width: 300px;
+  /* border: 5px solid red; */
+  border-radius: 15px;
+}
+.cn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: burlywood;
+}
+#cn{
+  display: flex;
+  justify-content: center;
+   align-items: center;
+  background-color: brown;
+  height: 400px;
+  width: 400px;
+    border-radius: 8px;
+    transition: all 0.1s ease-in-out;
+  }
+  #cn:hover{
+    /* transform: rotate(90deg); */
+    /* transform: skew(40deg); */
+    /* transform: scale(2); */
+    /* transform: translateY(100px); */
+    transform: translate(122px,122px);
+  }
+  </style>
+</head>
+<body>
+    <div class="set" id="set1">brocode</div>
+    <div class="set" id="set2">girlcode</div>
+    <div class="set" id="set3">myroad</div>
+    <div class="set" id="set4">herroad</div>
+<!-- more on selectors -->
+<h1>This is selector</h1>
+<div class="container">
+  <div class="row">
+    <p>this is para</p>
+    <a><p>this is also para inside a</p></a>
+  </div>
+  <p>this is another para</p>
+</div>
+  <p>outermost para</p>
+ <div class="boxer">
+   <h2><a href="http://google.com" target="_blank">Go to Google</a></h2>
+   <h2><a href="http://facebook.com" target="_self">Go to facebook</a></h2>
+  <form action="" class="form-control">
+    <input type="text"placeholder="Enter youe Name">
+    <input type="password" placeholder="Enter your Password">
+    <input type="submit" value="Submit">
+  </form>
+<ul>
+  <li class="box" id="box1">box1</li>
+  <li class="box" id="box2">box2</li>
+  <li class="box" id="box3">box3</li>
+  <li class="box" id="box4">box4</li>
+  <li class="box" id="box5">box5</li>
+</ul>
+ </div>
+ <header class="cl">
+  <nav class="navbr">
+    <ul class="navigation">
+      <li class="fg">Home</li>
+      <li class="fg">About</li>
+      <li class="fg">Service</li>
+      <li class="fg">Contact Us</li>
+    </ul>
+  </nav>
+    <nav>
+      <section>
+        <h3>Welcome to coding</h3>
+        <p>Lorem ipsum dolor sit amet
+           consectetur adipisicing elit. Perferendis soluta nihil accusantium, voluptate ipsa voluptas.</p>
+      </section>
+    </nav>
+  </nav>
+</header>
+<hr>
+<div class="cord">
+  <div class="card" id="card1">
+    <h5>Card1</h5>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iste consequatur saepe!</p>
+  </div>
+  <div class="card" id="card2">
+    <h5>Card2</h5>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iste consequatur saepe!</p>
+  </div>
+  <div class="card" id="card3">
+    <h5>Card3</h5>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iste consequatur saepe!</p>
+  </div>
+</div>
+<div class="rom">
+  <ram class="ram" id="ram1"></ram>
+<ram class="ram" id="ram2"></ram>
+<ram class="ram" id="ram3"></ram>
+</div>
+<div class="qw">
+  <div class="bx">
+    this is bx
+  </div>
+</div>
+<div class="st">
+  <div id="st">This is transition</div>
+</div>
+<div class="cn">
+  <div id="cn">This is tranform property</div>
+</div>
+</body>
+</html>

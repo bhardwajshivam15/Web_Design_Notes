@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      display: grid;
+      /* grid-template-columns: 300px 100px 100px; */
+      grid-template-columns: 300px auto 100px;
+      /* grid-template-columns: 1fr 4fr 1fr; */
+      /* grid-template-columns: repeat(2,auto); */
+      grid-gap: 2rem;
+    }
+    .item{
+      /* height: 100px;
+      width: 100px; */
+      background-color: red;
+      padding: 5px;
+      border: 2px solid black;
+    }
+    .set{
+      margin-top: 10px;
+      display: grid;
+      grid-template-rows: 1fr 1fr 4fr;
+      grid-auto-rows: 2fr;      /* rest of rows*/
+      grid-template-columns: 1fr 4fr 2fr;
+      grid-gap: 1rem;
+    }
+    .it{
+      background-color: red;
+      border: 4px solid rgb(14, 2, 2);
+      text-align: center;
+    
+    }
+    .div{
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      grid-template-rows: repeat(5,1fr);
+      grid-row-gap: 1rem;
+      grid-column-gap: 1rem;
+      margin: 20px;
+    }
+    .box{
+      border: 2px solid black;
+      background-color: rgb(168, 109, 168);
+padding: 23px;
+    }
+    .box:first-child{
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-row: 1/span 3;
+      grid-column: 1/span 3;
+    }
+    .kl{
+      display: grid;
+      grid-gap: 1rem;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* grid-template-columns: repeat(auto-fit,minmax(600px,3fr)); */
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));  /* when we shrink it it will be single lined or responsive*/
+    }
+    .kol{
+      border: 2px solid black;
+      background-color: rgb(245,187,101);
+      padding: 34px;
+    }
+    .itom{
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-areas: 
+      'navbr navbr navbr sect'
+      'as as as as';
+    }
+   
+    .sot{
+      background-color: yellow;
+      border: 3px solid black;
+/* display: grid; */
+    }
+    #navbr{
+      grid-area: navbr;
+    }
+    #sect{
+      grid-area: sect;
+    }
+   #as{
+    grid-area: as;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+   <div class="item">this is item1</div>
+   <div class="item">this is item2</div>
+   <div class="item">this is item3</div>
+   <div class="item">this is item4</div>
+   <div class="item">this is item5</div>
+   <div class="item">this is item6</div>
+  </div>
+  <div class="set">
+    <div class="it">this is grid1</div>
+    <div class="it">this is grid2</div>
+    <div class="it">this is grid3</div>
+    <div class="it">this is grid4</div>
+    <div class="it">this is grid5</div>
+    <div class="it">this is grid6</div>
+    <div class="it">this is grid7</div>
+    <div class="it">this is grid8</div>
+    <div class="it">this is grid9</div>
+    <div class="it">this is grid10</div>
+  </div>
+  <div class="div">
+    <div class="box">This is box1</div>
+    <div class="box">This is box2</div>
+    <div class="box">This is box3</div>
+    <div class="box">This is box4</div>
+    <div class="box">This is box5</div>
+    <div class="box">This is box6</div>
+    <div class="box">This is box7</div>
+    <div class="box">This is box8</div>
+    <div class="box">This is box9</div>
+    <div class="box">This is box10</div>
+    <div class="box">This is box11</div>
+    <div class="box">This is box12</div>
+    <div class="box">This is box13</div>
+    <div class="box">This is box14</div>
+    <div class="box">This is box15</div>
+  </div>
+  <div class="kl">
+    <div class="kol">this is set1</div>
+    <div class="kol">this is set2</div>
+    <div class="kol">this is set3</div>
+    <div class="kol">this is set4</div>
+    <div class="kol">this is set5</div>
+    <div class="kol">this is set6</div>
+    <div class="kol">this is set7</div>
+    <div class="kol">this is set8</div>
+    <div class="kol">this is set9</div>
+    <div class="kol">this is set10</div>
+    <div class="kol">this is set11</div>
+    <div class="kol">this is set12</div>
+  </div>
+  <div class="itom">
+    <div id="navbr" class="sot">
+      Home About Contact Us
+    </div>
+    <div id="sect" class="sot">
+      Lorem ipsum, dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates iusto illum, ipsum tempora cum itaque animi eveniet sit nostrum repudiandae soluta ratione beatae voluptatibus. Fuga in voluptatum distinctio. Atque a veniam veritatis, eos unde saepe, nostrum maiores doloremque dolores sunt, similique itaque recusandae accusamus dolore esse adipisci cumque? Veritatis, repellat in! Eius aspernatur reprehenderit ratione praesentium quia recusandae officiis nisi rerum enim iste molestias quisquam ullam iusto, quae laboriosam repudiandae ex fugit minima dolore in. Atque corporis corrupti consequatur quis, consectetur, fuga error aperiam, quam autem consequ
+      untur modi recusandae eum minus provident maxime tempore. Rerum qui perspiciatis earum perferendis possimus!consectetur adipisicing elit. Lorem ipsu
+    </div>
+    <div id="as" class="sot">
+      Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit itaque, saepe delectus quaerat consectetur voluptates, dolores quos eveniet, recusandae eaque commodi minima nostrum rerum eligendi repellendus? Obcaecati, quia beatae quaerat non cumque, quo eligendi in earum quas excepturi et ullam itaque rem, quod explicabo quibusdam eveniet sint ducimus? Voluptatem atque eius voluptatibus suscipit impedit, quibusdam nam aspernatur ex dolore, quo enim vel soluta perferendis in officiis qui consequuntur sunt minus neque. Dolore vel nulla modi fugiat ut ullam nostrum unde aut repellat. Quaerat ex optio inventore quis reprehenderit reiciendis vel molestiae sed commodi, aut voluptates in pariatur. Tenetur ratione nihil dignissimos asperiores reprehenderit ev
+      eniet! In quae quas accusantium? Animi nobis sunt, at sint velit itaque a tenetur maiores voluptas expedita!consectetur adipisicing elit.
+       Temporibus natus quidem placeat blanditiis, illo porro dolor voluptatibus ratione voluptatem doloribus.
+    </div>
+    <!-- <div class="sot">this is sot1</div>
+    <div class="sot">this is sot2</div>
+    <div class="sot">this is sot3</div>
+    <div class="sot">this is sot4</div>
+    <div class="sot">this is sot5</div>
+    <div class="sot">this is sot6</div>
+    <div class="sot">this is sot7</div>
+    <div class="sot">this is sot8</div>
+    <div class="sot">this is sot9</div>
+    <div class="sot">this is sot10</div>
+    <div class="sot">this is sot11</div>
+    <div class="sot">this is sot12</div>
+    <div class="sot">this is sot13</div>
+    <div class="sot">this is sot14</div> -->
+  </div>
+</body>
+</html>
